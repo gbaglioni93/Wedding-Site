@@ -65,10 +65,9 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Navbar navItems={pageContent} navTitle={globalContent[0].navTitle} />
       {isLoading ? <LinearProgress /> : null}
-      {/* <LinearProgress /> */}
       <Routes>
         <Route
           path="/"
