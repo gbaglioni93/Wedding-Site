@@ -1,0 +1,112 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  color: rgb(26, 26, 26);
+}
+
+.navbar-title h2 {
+  margin: 0;
+  text-decoration: none;
+}
+
+.navbar-links {
+  overflow: hidden;
+  max-height: 300px; /* Set a maximum height for the dropdown */
+  opacity: 1;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.header {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Center links horizontally */
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+}
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  color: rgb(26, 26, 26);
+  margin: 2px 0;
+  background-color: rgb(81, 81, 81);
+}
+
+.navbar-links.active {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.navbar-links a.active-page {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-links {
+    flex-direction: column;
+    align-items: center;
+    max-height: none;
+    overflow: hidden;
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    color: white;
+    background-color: white; /* Add a background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for separation */
+  }
+
+  .navbar-links ul {
+    margin: 10px 0;
+    padding: 0; /* Reset padding */
+    width: 100%; /* Take full width */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    margin: 0; /* Reset margin */
+    padding: 10px; /* Add padding for spacing */
+    border-bottom: 1px solid rgb(200, 200, 200); /* Add a border between items */
+    padding: 1rem;
+  }
+
+  .navbar-links a {
+    text-decoration: none;
+    color: rgb(26, 26, 26);
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .navbar-links ul {
+    margin: 10px 0; /* Add margin for better spacing */
+  }
+}
