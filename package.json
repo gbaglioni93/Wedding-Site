@@ -2,6 +2,7 @@
   "name": "wedding-site",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://gbaglioni93.github.io/Wedding-Site/",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.19.0",
     "@emotion/react": "^11.11.3",
