@@ -57,13 +57,13 @@ export default function TemplatePage(props) {
     return null;
   }
 
-  if (window.location.hash && window.location.hash.startsWith("#/")) {
-    // Extract the part after the slash
-    const newPath = window.location.hash.slice(2);
+  // if (window.location.hash && window.location.hash.startsWith("#/")) {
+  //   // Extract the part after the slash
+  //   const newPath = window.location.hash.slice(2);
 
-    // Use replaceState to update the URL without the hash and slash
-    window.history.replaceState({}, document.title, newPath);
-  }
+  //   // Use replaceState to update the URL without the hash and slash
+  //   window.history.replaceState({}, document.title, newPath);
+  // }
 
   return (
     <>

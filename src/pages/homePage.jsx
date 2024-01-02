@@ -37,9 +37,9 @@ function getInfoContent(props) {
   );
 }
 export default function Homepage(props) {
-  useEffect(() => {
-    window.history.pushState({}, document.title, "/");
-  }, []);
+  // useEffect(() => {
+  //   window.history.pushState({}, document.title, "/");
+  // }, []);
   return (
     <div className="home-container">
       <div className="bg">
