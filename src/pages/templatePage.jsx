@@ -40,6 +40,8 @@ export default function TemplatePage(props) {
     );
     if (directionsIndex !== -1) {
       setChosenPage(props.pageHeaders[directionsIndex]);
+    } else {
+      window.location.href = "/";
     }
   }, [location.pathname, props.pageHeaders]);
 
@@ -53,6 +55,14 @@ export default function TemplatePage(props) {
   // Check if props or chosenPage is not available
   if (!props || !chosenPage || !content) {
     return null;
+  }
+
+  if (window.location.hash && window.location.hash.startsWith("#/")) {
+    // Extract the part after the slash
+    const newPath = window.location.hash.slice(2);
+
+    // Use replaceState to update the URL without the hash and slash
+    window.history.replaceState({}, document.title, newPath);
   }
 
   return (

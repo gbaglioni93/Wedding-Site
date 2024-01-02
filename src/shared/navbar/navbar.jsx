@@ -37,7 +37,7 @@ const Navbar = ({ navItems, navTitle }) => {
               <Link
                 to={item.slug}
                 className={
-                  location.pathname.substring(1) === item.slug
+                  location.hash.substring(1) === `#${item.slug}`
                     ? "active-page"
                     : ""
                 }

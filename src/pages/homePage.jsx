@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./css/globalStyles.css";
 import Navbar from "../shared/navbar/navbar";
 import Footer from "../shared/footer";
@@ -12,9 +12,19 @@ function getInfoContent(props) {
         {props.globalContent.mainWeddingTime}
       </h2>
       <p className=" larger-font">{props.globalContent.weddingLocation}</p>
-      <p onClick={() => alert("implement map")} className=" larger-font">
-        {props.globalContent.homepageSectionMap}
-      </p>
+      {props.globalContent.homepageSectionMap && (
+        <>
+          <p
+            onClick={() =>
+              window.location.replace(props.globalContent.homepageMapUrl)
+            }
+            className=" larger-font"
+            id="map-button"
+          >
+            {props.globalContent.homepageSectionMap}
+          </p>
+        </>
+      )}
       <button
         onClick={() => {
           window.location.replace(props.globalContent.homePageButtonUrl);
@@ -27,6 +37,9 @@ function getInfoContent(props) {
   );
 }
 export default function Homepage(props) {
+  useEffect(() => {
+    window.history.pushState({}, document.title, "/");
+  }, []);
   return (
     <div className="home-container">
       <div className="bg">
