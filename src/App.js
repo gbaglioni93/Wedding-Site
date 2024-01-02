@@ -66,8 +66,8 @@ function App() {
 
   return (
     <Router
-      // basename={process.env.PUBLIC_URL}
-      basename="/Wedding-Site"
+      basename={process.env.PUBLIC_URL}
+      // basename="/Wedding-Site"
     >
       <Navbar navItems={pageContent} navTitle={globalContent[0].navTitle} />
       {isLoading ? <LinearProgress /> : null}
