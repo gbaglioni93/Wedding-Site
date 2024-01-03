@@ -70,7 +70,9 @@ function App() {
       // basename="/Wedding-Site"
     >
       <Navbar navItems={pageContent} navTitle={globalContent[0].navTitle} />
-      {isLoading ? <LinearProgress /> : null}
+      {isLoading ? (
+        <LinearProgress style={{ backgroundColor: "#f9f9f9" }} />
+      ) : null}
       <Routes>
         <Route
           path="/"

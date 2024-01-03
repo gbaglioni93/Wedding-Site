@@ -60,16 +60,16 @@
 .navbar-links.active {
   max-height: 0;
   opacity: 0;
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.navbar-links a.active-page {
+.navbar-links a.selected-page {
   text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
   .navbar-links {
     flex-direction: column;
+    height: 100%;
     align-items: center;
     max-height: none;
     overflow: hidden;
@@ -93,8 +93,8 @@
   .navbar-links li {
     margin: 0; /* Reset margin */
     padding: 10px; /* Add padding for spacing */
-    border-bottom: 1px solid rgb(200, 200, 200); /* Add a border between items */
-    padding: 1rem;
+    /* border-bottom: 1px solid rgb(200, 200, 200); Add a border between items */
+    padding: 2rem;
   }
 
   .navbar-links a {

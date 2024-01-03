@@ -48,10 +48,19 @@
   .content-row div {
     padding-top: 0;
     padding-bottom: 0;
+    padding: 0;
+  }
+
+  .content-row div:first-of-type {
+    border-right: none;
   }
 
   .header-section h1 {
     font-size: 2rem;
+  }
+
+  .header-section {
+    margin-top: 2rem;
   }
 
   .content-row div h1 {
