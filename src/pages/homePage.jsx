@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./css/globalStyles.css";
-import Navbar from "../shared/navbar/navbar";
-import Footer from "../shared/footer";
+import secondaryImage from "../assets/proposal.jpg";
 
 function getInfoContent(props) {
   return (
@@ -37,9 +36,6 @@ function getInfoContent(props) {
   );
 }
 export default function Homepage(props) {
-  // useEffect(() => {
-  //   window.history.pushState({}, document.title, "/");
-  // }, []);
   return (
     <div className="home-container">
       <div className="bg">
@@ -53,7 +49,7 @@ export default function Homepage(props) {
       <div className="page">
         <div className="page-row">
           <div className="img-container">
-            <img className="test" src={props.globalContent.secondaryImageUrl} />
+            <img className="test" src={secondaryImage} />
           </div>
           <div className="key-info-section fancy-font ">
             {getInfoContent(props)}

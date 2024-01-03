@@ -1,7 +1,8 @@
 .bg {
   margin-top: 0;
   padding-top: 0;
-  background-image: url("https://plus.unsplash.com/premium_photo-1671050939885-2cb29c4a85b1?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  /* background-image: url("https://plus.unsplash.com/premium_photo-1671050939885-2cb29c4a85b1?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+  background-image: url("../../assets/dre_cathy.jpg");
   /* Full height */
   height: 100vh;
 
