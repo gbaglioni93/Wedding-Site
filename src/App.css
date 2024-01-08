@@ -1,3 +1,20 @@
+:root {
+  --body-bg-color: #ffffff; /* Default background color */
+}
+body {
+  background-color: var(--body-bg-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--header-color);
+}
+
+p,
+a {
+  color: var(--text-color);
+}
 .App {
   text-align: center;
 }
@@ -22,6 +39,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  z-index: 1000;
 }
 
 .App-link {
@@ -35,4 +53,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.white-font {
+  color: white;
 }

@@ -5,11 +5,11 @@ import secondaryImage from "../assets/proposal.jpg";
 function getInfoContent(props) {
   return (
     <>
-      <h1 className="">{props.globalContent.homepageSectionTitle} </h1>
-      <h2 className="">
+      <h1>{props.globalContent.homepageSectionTitle} </h1>
+      <p className=" larger-font">
         {props.globalContent.weddingDateInNumbers} |
         {props.globalContent.mainWeddingTime}
-      </h2>
+      </p>
       <p className=" larger-font">{props.globalContent.weddingLocation}</p>
       {props.globalContent.homepageSectionMap && (
         <>
@@ -40,8 +40,10 @@ export default function Homepage(props) {
     <div className="home-container">
       <div className="bg">
         <div className="center-page">
-          <h1 className="fancy-font">{props.globalContent.mainTitle}</h1>
-          <h2 className="fancy-font">
+          <h1 className="fancy-font white-font">
+            {props.globalContent.mainTitle}
+          </h1>
+          <h2 className="fancy-font white-font">
             {props.globalContent.weddingDateInNumbers}
           </h2>
         </div>

@@ -57,20 +57,12 @@ export default function TemplatePage(props) {
     return null;
   }
 
-  // if (window.location.hash && window.location.hash.startsWith("#/")) {
-  //   // Extract the part after the slash
-  //   const newPath = window.location.hash.slice(2);
-
-  //   // Use replaceState to update the URL without the hash and slash
-  //   window.history.replaceState({}, document.title, newPath);
-  // }
-
   return (
     <>
       <div className="header-section fancy-font">
         <h1>{chosenPage.header}</h1>
         <p>{chosenPage.subTitle}</p>
-        <p>{chosenPage.description}</p>
+        {documentToReactComponents(chosenPage.description)}
       </div>
 
       {filteredContent.map((item) => (

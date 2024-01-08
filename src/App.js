@@ -20,7 +20,7 @@ function App() {
         const slugsAndHeaders = content.map((item) => ({
           slug: item.fields.slug,
           header: item.fields.header,
-          description: item.fields.description,
+          description: item.fields.pageDescription,
           subTitle: item.fields.subTitle,
         }));
         setPageContent(slugsAndHeaders);
@@ -49,9 +49,24 @@ function App() {
           homepageMapUrl: item.fields.homepageMapUrl,
           homepageSectionMap: item.fields.homepageSectionMap,
           secondaryImageUrl: item.fields.secondaryImageUrl,
+          bodyBGColor: item.fields.pageBackgroundColor,
+          headerFontColor: item.fields.headerFontColor,
+          textFontColor: item.fields.textFontColor,
         }));
         setGlobalContent(global);
         console.log(global[0]?.navTitle);
+        document.documentElement.style.setProperty(
+          "--header-color",
+          global[0].headerFontColor
+        );
+        document.documentElement.style.setProperty(
+          "--text-color",
+          global[0].textFontColor
+        );
+        document.documentElement.style.setProperty(
+          "--body-bg-color",
+          global[0].bodyBGColor
+        );
       } catch (error) {
         console.error("Error fetching global content:", error);
       }

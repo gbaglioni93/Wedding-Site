@@ -55,6 +55,10 @@
     border-right: none;
   }
 
+  .content-row div:nth-of-type(2) p:first-of-type {
+    margin-top: 0;
+  }
+
   .header-section h1 {
     font-size: 2rem;
   }
