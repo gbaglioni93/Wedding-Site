@@ -10,20 +10,16 @@ function getInfoContent(props) {
         {props.globalContent.weddingDateInNumbers} |
         {props.globalContent.mainWeddingTime}
       </p>
-      <p className=" larger-font">{props.globalContent.weddingLocation}</p>
-      {props.globalContent.homepageSectionMap && (
-        <>
-          <p
-            onClick={() =>
-              window.location.replace(props.globalContent.homepageMapUrl)
-            }
-            className=" larger-font"
-            id="map-button"
-          >
-            {props.globalContent.homepageSectionMap}
-          </p>
-        </>
-      )}
+      <p
+        className=" larger-font"
+        id="map-button"
+        onClick={() =>
+          window.location.replace(props.globalContent.homepageMapUrl)
+        }
+      >
+        {props.globalContent.weddingLocation}
+      </p>
+
       <button
         onClick={() => {
           window.location.replace(props.globalContent.homePageButtonUrl);

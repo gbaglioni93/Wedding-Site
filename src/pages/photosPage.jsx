@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import "./css/photosPage.css";
 import secondaryImage from "../assets/proposal.jpg";
+import primaryImage from "../assets/dre_cathy.jpg";
 
 const imageUrls = [
+  primaryImage,
   secondaryImage,
+  primaryImage,
   secondaryImage,
+  primaryImage,
   secondaryImage,
   secondaryImage,
   secondaryImage,

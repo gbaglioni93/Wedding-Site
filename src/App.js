@@ -48,7 +48,6 @@ function App() {
           mainTitle: item.fields.mainTitle,
           homepageSectionTitle: item.fields.homePageSectionTitle,
           homepageMapUrl: item.fields.homepageMapUrl,
-          homepageSectionMap: item.fields.homepageSectionMap,
           secondaryImageUrl: item.fields.secondaryImageUrl,
           bodyBGColor: item.fields.pageBackgroundColor,
           headerFontColor: item.fields.headerFontColor,
