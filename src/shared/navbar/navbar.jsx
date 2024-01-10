@@ -71,6 +71,19 @@ const Navbar = ({ navItems, navTitle }) => {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                to="/gallery"
+                onClick={() => setShowMobileMenu(!showMobileMenu)}
+                className={
+                  location.pathname.substring(1) === "gallery"
+                    ? "selected-page"
+                    : ""
+                }
+              >
+                GALLERY
+              </Link>
+            </li>
           </ul>
         </div>
       ) : null}

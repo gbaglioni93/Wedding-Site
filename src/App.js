@@ -7,6 +7,7 @@ import getContent from "./shared/contentfulService";
 import Navbar from "./shared/navbar/navbar";
 import Footer from "./shared/footer";
 import { LinearProgress } from "@mui/material";
+import PhotosPage from "./pages/photosPage";
 
 function App() {
   const [pageContent, setPageContent] = useState([]);
@@ -80,10 +81,7 @@ function App() {
   }
 
   return (
-    <Router
-      basename={process.env.PUBLIC_URL}
-      // basename="/Wedding-Site"
-    >
+    <Router basename={process.env.PUBLIC_URL}>
       <Navbar navItems={pageContent} navTitle={globalContent[0].navTitle} />
       {isLoading ? (
         <LinearProgress style={{ backgroundColor: "#f9f9f9" }} />
@@ -93,6 +91,15 @@ function App() {
           path="/"
           element={
             <Homepage
+              pageHeaders={pageContent}
+              globalContent={globalContent[0]}
+            />
+          }
+        />
+        <Route
+          path="/gallery"
+          element={
+            <PhotosPage
               pageHeaders={pageContent}
               globalContent={globalContent[0]}
             />
