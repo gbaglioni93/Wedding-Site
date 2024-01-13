@@ -19,13 +19,13 @@ const FaqTest = ({ question, answer }) => {
   );
 };
 
-export default function FaqContainer({ data }) {
+export default function FaqContainer({ title, description, data }) {
   return (
     <div className="questions-row">
       <div className="questions-container">
         <div className="header-section fancy-font">
-          <h1>Frequently Asked Questions</h1>
-          <p>Because you're too lazy to read the rest</p>
+          <h1>{title}</h1>
+          <p>{description}</p>
         </div>
         {data.map((item, index) => {
           return <FaqTest question={item.question} answer={item.answer} />;

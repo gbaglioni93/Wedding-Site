@@ -70,6 +70,8 @@ function App() {
           bodyBGColor: item.fields.pageBackgroundColor,
           headerFontColor: item.fields.headerFontColor,
           textFontColor: item.fields.textFontColor,
+          faqTitle: item.fields.faqTitle,
+          faqDescription: item.fields.faqDescription,
         }));
         setGlobalContent(global);
         console.log(global[0]?.navTitle);
@@ -132,7 +134,11 @@ function App() {
           }
         />
       </Routes>
-      <FaqContainer data={faqContent} />
+      <FaqContainer
+        title={globalContent[0].faqTitle}
+        description={globalContent[0].faqDescription}
+        data={faqContent}
+      />
       {!isLoading && <Footer text={globalContent[0].footer} />}
     </Router>
   );
