@@ -8,10 +8,12 @@ import Navbar from "./shared/navbar/navbar";
 import Footer from "./shared/footer";
 import { LinearProgress } from "@mui/material";
 import PhotosPage from "./pages/photosPage";
+import FaqContainer from "./shared/faq/faqContainer";
 
 function App() {
   const [pageContent, setPageContent] = useState([]);
   const [globalContent, setGlobalContent] = useState([]);
+  const [faqContent, setFaqContent] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -33,6 +35,22 @@ function App() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const content = await getContent("faq");
+        const questions = content.map((item) => ({
+          question: item.fields.question,
+          answer: item.fields.answer,
+        }));
+        setFaqContent(questions);
+      } catch (error) {
+        console.error("Error fetching FAQ content:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -114,6 +132,7 @@ function App() {
           }
         />
       </Routes>
+      <FaqContainer data={faqContent} />
       {!isLoading && <Footer text={globalContent[0].footer} />}
     </Router>
   );
