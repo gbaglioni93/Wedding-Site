@@ -14,7 +14,7 @@ function App() {
   const [pageContent, setPageContent] = useState([]);
   const [globalContent, setGlobalContent] = useState([]);
   const [faqContent, setFaqContent] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,6 +27,7 @@ function App() {
           subTitle: item.fields.subTitle,
         }));
         setPageContent(slugsAndHeaders);
+        setIsLoading(false);
       } catch (error) {
         console.error("Error fetching page content:", error);
       }
@@ -44,6 +45,7 @@ function App() {
           answer: item.fields.answer,
         }));
         setFaqContent(questions);
+        setIsLoading(false);
       } catch (error) {
         console.error("Error fetching FAQ content:", error);
       }
@@ -87,6 +89,7 @@ function App() {
           "--body-bg-color",
           global[0].bodyBGColor
         );
+        setIsLoading(false);
       } catch (error) {
         console.error("Error fetching global content:", error);
       }
@@ -125,7 +128,7 @@ function App() {
           }
         />
         <Route
-          path="/:x"
+          path="/:contentfulPage"
           element={
             <TemplatePage
               pageHeaders={pageContent}
@@ -134,11 +137,13 @@ function App() {
           }
         />
       </Routes>
-      <FaqContainer
-        title={globalContent[0].faqTitle}
-        description={globalContent[0].faqDescription}
-        data={faqContent}
-      />
+      {!isLoading && (
+        <FaqContainer
+          title={globalContent[0].faqTitle}
+          description={globalContent[0].faqDescription}
+          data={faqContent}
+        />
+      )}
       {!isLoading && <Footer text={globalContent[0].footer} />}
     </Router>
   );
