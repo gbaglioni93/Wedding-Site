@@ -1,35 +1,28 @@
 import React, { useState } from "react";
 import "./css/photosPage.css";
-import secondaryImage from "../assets/proposal.jpg";
-import primaryImage from "../assets/dre_cathy.jpg";
+import images from "../utils/loadImages";
 
-const imageUrls = [
-  primaryImage,
-  secondaryImage,
-  primaryImage,
-  secondaryImage,
-  primaryImage,
-  secondaryImage,
-  secondaryImage,
-  secondaryImage,
-  secondaryImage,
-  secondaryImage,
-  secondaryImage,
-  secondaryImage,
-  secondaryImage,
-  secondaryImage,
-  secondaryImage,
-  secondaryImage,
-  secondaryImage,
-];
+const imageUrls = Object.values(images);
 
 export default function PhotosPage() {
-  const FullScreenImageModal = ({ onClose }) => {
-    console.log(selectedImage);
+  const [selectedImage, setSelectedImage] = useState(null);
 
+  const FullScreenImageModal = ({ onClose, selectedImage }) => {
     const closeHandler = () => {
       onClose();
       document.body.classList.remove("modal-open");
+    };
+
+    const previousImage = () => {
+      setSelectedImage((prevIndex) =>
+        prevIndex > 0 ? prevIndex - 1 : imageUrls.length - 1
+      );
+    };
+
+    const nextImage = () => {
+      setSelectedImage((prevIndex) =>
+        prevIndex < imageUrls.length - 1 ? prevIndex + 1 : 0
+      );
     };
 
     return (
@@ -37,24 +30,18 @@ export default function PhotosPage() {
         <button className="close-button" onClick={closeHandler}>
           Close
         </button>
-        <img src={imageUrls[selectedImage]} alt="Full Screen" />
+        <img src={imageUrls[selectedImage]} loading="lazy" alt="Full Screen" />
         <div className="navigation-buttons">
-          <button onClick={() => setSelectedImage(selectedImage - 1)}>
-            Previous
-          </button>
-          <button onClick={() => setSelectedImage(selectedImage + 1)}>
-            Next
-          </button>
+          <button onClick={previousImage}>Previous</button>
+          <button onClick={nextImage}>Next</button>
         </div>
       </div>
     );
   };
 
-  const [selectedImage, setSelectedImage] = useState(null);
-
   function handlePhotoClick(index) {
     setSelectedImage(index);
-    console.log(index);
+    document.body.classList.add("modal-open");
   }
 
   return (
@@ -65,17 +52,22 @@ export default function PhotosPage() {
       </div>
       <div className="small-photos">
         {imageUrls.map((imageUrl, index) => (
-          <img
-            key={index}
-            src={imageUrl}
-            alt={`Photo ${index}`}
-            onClick={() => handlePhotoClick(index)}
-          />
+          <div className="img-box">
+            <img
+              key={index}
+              src={imageUrl}
+              alt={`Photo ${index}`}
+              onClick={() => handlePhotoClick(index)}
+            />
+          </div>
         ))}
       </div>
 
       {selectedImage !== null && (
-        <FullScreenImageModal onClose={() => setSelectedImage(null)} />
+        <FullScreenImageModal
+          onClose={() => setSelectedImage(null)}
+          selectedImage={selectedImage}
+        />
       )}
     </div>
   );

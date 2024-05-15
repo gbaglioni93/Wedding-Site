@@ -36,10 +36,10 @@ export default function Homepage(props) {
     <div className="home-container">
       <div className="bg">
         <div className="center-page">
-          <h1 className="fancy-font white-font">
+          <h1 className="fancy-font secondary-font">
             {props.globalContent.mainTitle}
           </h1>
-          <h2 className="fancy-font white-font">
+          <h2 className="fancy-font secondary-font">
             {props.globalContent.weddingDateInNumbers}
           </h2>
         </div>
@@ -47,7 +47,7 @@ export default function Homepage(props) {
       <div className="page">
         <div className="page-row">
           <div className="img-container">
-            <img className="test" src={secondaryImage} />
+            <img className="second-homescreen-img" src={secondaryImage} />
           </div>
           <div className="key-info-section fancy-font ">
             {getInfoContent(props)}
