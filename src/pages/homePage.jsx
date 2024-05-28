@@ -5,13 +5,8 @@ import secondaryImage from "../assets/proposal.jpg";
 function getInfoContent(props) {
   return (
     <>
-      <h1>{props.globalContent.homepageSectionTitle} </h1>
-      <p className=" larger-font">
-        {props.globalContent.weddingDateInNumbers} |
-        {props.globalContent.mainWeddingTime}
-      </p>
       <p
-        className=" larger-font"
+        className="fancy-font"
         id="map-button"
         onClick={() =>
           window.location.replace(props.globalContent.homepageMapUrl)
@@ -42,13 +37,6 @@ export default function Homepage(props) {
           <h2 className="fancy-font secondary-font">
             {props.globalContent.weddingDateInNumbers}
           </h2>
-        </div>
-      </div>
-      <div className="page">
-        <div className="page-row">
-          <div className="img-container">
-            <img className="second-homescreen-img" src={secondaryImage} />
-          </div>
           <div className="key-info-section fancy-font ">
             {getInfoContent(props)}
           </div>
