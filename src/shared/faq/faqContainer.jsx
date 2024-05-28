@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./faq.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import getContent from "../contentfulService";
 
 const FaqTest = ({ question, answer }) => {
   const [showAnswer, setShowAnswer] = useState(false);
@@ -19,15 +20,31 @@ const FaqTest = ({ question, answer }) => {
   );
 };
 
-export default function FaqContainer({ title, description, data }) {
+export default function FaqContainer() {
+  const [faqContent, setFaqContent] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const content = await getContent("faq");
+        const questions = content.map((item) => ({
+          question: item.fields.question,
+          answer: item.fields.answer,
+        }));
+        setFaqContent(questions);
+        // setIsLoading(false);
+      } catch (error) {
+        console.error("Error fetching FAQ content:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="questions-row">
       <div className="questions-container">
-        <div className="header-section fancy-font">
-          <h1>{title}</h1>
-          <p>{description}</p>
-        </div>
-        {data.map((item, index) => {
+        {faqContent.map((item, index) => {
           return <FaqTest question={item.question} answer={item.answer} />;
         })}
       </div>

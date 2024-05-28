@@ -3,6 +3,7 @@ import "./css/templatePage.css";
 import { useLocation } from "react-router-dom";
 import getContent from "../shared/contentfulService";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import FaqContainer from "../shared/faq/faqContainer";
 
 export default function TemplatePage(props) {
   const [content, setContent] = useState(null);
@@ -61,17 +62,18 @@ export default function TemplatePage(props) {
     <>
       <div className="header-section fancy-font">
         <h1>{chosenPage.header}</h1>
-        <p>{chosenPage.subTitle}</p>
+        {chosenPage.subTitle && <p>{chosenPage.subTitle}</p>}
         {documentToReactComponents(chosenPage.description)}
       </div>
+
+      {chosenPage.slug === "faq" ? <FaqContainer data={props.faq} /> : null}
 
       {filteredContent.map((item) => (
         <div className="content-row fancy-font" key={item.title}>
           <div>
             <h1>{item.title.toUpperCase()}</h1>
-            {item.leftInfo.map((info) => (
-              <p key={info}>{info}</p>
-            ))}
+            {item.leftInfo &&
+              item.leftInfo.map((info) => <p key={info}>{info}</p>)}
           </div>
           <div>
             {item.rightContent && documentToReactComponents(item.rightContent)}

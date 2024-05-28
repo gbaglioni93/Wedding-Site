@@ -8,12 +8,10 @@ import Navbar from "./shared/navbar/navbar";
 import Footer from "./shared/footer";
 import { LinearProgress } from "@mui/material";
 import PhotosPage from "./pages/photosPage";
-import FaqContainer from "./shared/faq/faqContainer";
 
 function App() {
   const [pageContent, setPageContent] = useState([]);
   const [globalContent, setGlobalContent] = useState([]);
-  const [faqContent, setFaqContent] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -39,23 +37,6 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const content = await getContent("faq");
-        const questions = content.map((item) => ({
-          question: item.fields.question,
-          answer: item.fields.answer,
-        }));
-        setFaqContent(questions);
-        setIsLoading(false);
-      } catch (error) {
-        console.error("Error fetching FAQ content:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
         const content = await getContent("globalData");
         const global = content.map((item) => ({
           mainWeddingTime: item.fields.mainWeddingTime,
@@ -72,8 +53,8 @@ function App() {
           bodyBGColor: item.fields.pageBackgroundColor,
           headerFontColor: item.fields.headerFontColor,
           textFontColor: item.fields.textFontColor,
-          faqTitle: item.fields.faqTitle,
-          faqDescription: item.fields.faqDescription,
+          // faqTitle: item.fields.faqTitle,
+          // faqDescription: item.fields.faqDescription,
         }));
         setGlobalContent(global);
         console.log(global[0]?.navTitle);
@@ -133,17 +114,12 @@ function App() {
             <TemplatePage
               pageHeaders={pageContent}
               updateIsLoading={(val) => setIsLoading(val)}
+              // faq={faqContent}
             />
           }
         />
       </Routes>
-      {!isLoading && (
-        <FaqContainer
-          title={globalContent[0].faqTitle}
-          description={globalContent[0].faqDescription}
-          data={faqContent}
-        />
-      )}
+
       {!isLoading && <Footer text={globalContent[0].footer} />}
     </Router>
   );
