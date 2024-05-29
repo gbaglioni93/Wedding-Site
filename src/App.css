@@ -29,6 +29,10 @@ a {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.fancy-font {
+  font-family: var(--fancy-font);
+  /* "Jacques Francois", serif; */
+}
 
 .App-header {
   background-color: #282c34;

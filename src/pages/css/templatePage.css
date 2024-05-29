@@ -7,14 +7,14 @@
 }
 
 .header-section h1 {
-  font-size: 3.5rem;
+  font-size: var(--h1-font-size);
   font-weight: 100;
 }
 
 .header-section p {
   width: 75%;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: var(--paragraph-font-size);
 }
 
 .content-row {
@@ -26,7 +26,7 @@
 }
 
 .content-row div h1 {
-  font-size: 3rem;
+  font-size: var(--h2-font-size);
   font-weight: 100;
 }
 
@@ -34,6 +34,7 @@
   text-align: center;
   padding: 5rem;
   width: 100%;
+  font-size: var(--paragraph-font-size);
 }
 
 .content-row div:first-of-type {
@@ -60,7 +61,8 @@
   }
 
   .header-section h1 {
-    font-size: 2rem;
+    font-size: var(--h1-font-size);
+    text-align: center;
   }
 
   .header-section {
@@ -68,6 +70,6 @@
   }
 
   .content-row div h1 {
-    font-size: 1.5rem;
+    font-size: var(--h2-font-size);
   }
 }

@@ -21,7 +21,7 @@
 }
 
 .header {
-  font-size: 1.5rem;
+  font-size: var(--paragraph-font-size);
   text-decoration: none;
 }
 

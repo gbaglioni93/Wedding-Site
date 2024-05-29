@@ -53,14 +53,32 @@ function App() {
           bodyBGColor: item.fields.pageBackgroundColor,
           headerFontColor: item.fields.headerFontColor,
           textFontColor: item.fields.textFontColor,
-          // faqTitle: item.fields.faqTitle,
-          // faqDescription: item.fields.faqDescription,
+          fancyFont: item.fields.fancyFont,
+          h2FontSize: item.fields.h2FontSize,
+          h1FontSize: item.fields.h1FontSize,
+          paragraphFontSize: item.fields.paragraphFontSize,
         }));
         setGlobalContent(global);
         console.log(global[0]?.navTitle);
         document.documentElement.style.setProperty(
           "--header-color",
           global[0].headerFontColor
+        );
+        document.documentElement.style.setProperty(
+          "--h1-font-size",
+          global[0].h1FontSize
+        );
+        document.documentElement.style.setProperty(
+          "--h2-font-size",
+          global[0].h2FontSize
+        );
+        document.documentElement.style.setProperty(
+          "--paragraph-font-size",
+          global[0].paragraphFontSize
+        );
+        document.documentElement.style.setProperty(
+          "--fancy-font",
+          global[0].fancyFont
         );
         document.documentElement.style.setProperty(
           "--text-color",
