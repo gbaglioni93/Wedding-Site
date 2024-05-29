@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Homepage from "./pages/homePage";
 import TemplatePage from "./pages/templatePage";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import getContent from "./shared/contentfulService";
 import Navbar from "./shared/navbar/navbar";
 import Footer from "./shared/footer";
@@ -132,7 +133,6 @@ function App() {
             <TemplatePage
               pageHeaders={pageContent}
               updateIsLoading={(val) => setIsLoading(val)}
-              // faq={faqContent}
             />
           }
         />
