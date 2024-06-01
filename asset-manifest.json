@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8c0d1d1e.css",
-    "main.js": "/static/js/main.98471ec7.js",
+    "main.js": "/static/js/main.9e19a2aa.js",
     "static/js/787.0942884d.chunk.js": "/static/js/787.0942884d.chunk.js",
     "static/media/pixar.jpg": "/static/media/pixar.d833bd86b1753a24da49.jpg",
     "static/media/IMG_3204 2.jpg": "/static/media/IMG_3204 2.d7be32fb5dafaf6132b4.jpg",
@@ -9,7 +9,6 @@
     "static/media/IMG_9093.jpg": "/static/media/IMG_9093.c0d23e05fd91e0994bd7.jpg",
     "static/media/IMG_6511.jpg": "/static/media/IMG_6511.10512516fd6b3e38d8b6.jpg",
     "static/media/IMG_6426.jpg": "/static/media/IMG_6426.b767116b858fa0402731.jpg",
-    "static/media/IMG_1262.jpeg": "/static/media/IMG_1262.63bd9700d96e4f7bc5bc.jpeg",
     "static/media/IMG_3940.jpg": "/static/media/IMG_3940.c07b6ab83fc1ec19b29c.jpg",
     "static/media/IMG_1059.jpg": "/static/media/IMG_1059.4331263e0efa615171f1.jpg",
     "static/media/IMG_3372.jpg": "/static/media/IMG_3372.96a9656400c509ace3ee.jpg",
@@ -20,7 +19,6 @@
     "static/media/IMG_0677.jpg": "/static/media/IMG_0677.fe82ca058597b48ba314.jpg",
     "static/media/IMG_3204.jpg": "/static/media/IMG_3204.6c0502e0151b7fcb7eea.jpg",
     "static/media/IMG_0509.jpg": "/static/media/IMG_0509.4eadf19e5688ba39b140.jpg",
-    "static/media/IMG_1893 (1).jpg": "/static/media/IMG_1893 (1).80eac8917c1b5a0dda78.jpg",
     "static/media/IMG_5160.jpg": "/static/media/IMG_5160.2f4ec26b0cd8cc86dcc3.jpg",
     "static/media/IMG_1262.jpg": "/static/media/IMG_1262.56d6b2f90bd2634f7126.jpg",
     "static/media/IMG_3106.jpg": "/static/media/IMG_3106.d58fddb7a8ebbadb52a2.jpg",
@@ -34,7 +32,6 @@
     "static/media/IMG_2293.jpg": "/static/media/IMG_2293.10ef967d899b1296619d.jpg",
     "static/media/PXL_20220805_104932425.jpg": "/static/media/PXL_20220805_104932425.3f18fa7e8f3a0a5a7e04.jpg",
     "static/media/IMG_5794.jpg": "/static/media/IMG_5794.fa603908ac3a9e11f6cf.jpg",
-    "static/media/IMG_6540.jpg": "/static/media/IMG_6540.26078057d45544e558de.jpg",
     "static/media/IMG_6343.jpg": "/static/media/IMG_6343.63686718fcb887b1324f.jpg",
     "static/media/IMG_6538.jpg": "/static/media/IMG_6538.f97b04080b0787ded8a8.jpg",
     "static/media/IMG_5016.jpg": "/static/media/IMG_5016.2d631544a9f75157315d.jpg",
@@ -70,18 +67,17 @@
     "static/media/IMG_8615.jpg": "/static/media/IMG_8615.8856a58329e744ecf3cf.jpg",
     "static/media/IMG_6531.jpg": "/static/media/IMG_6531.9061ff9876d7618c721d.jpg",
     "static/media/IMG_9443.jpg": "/static/media/IMG_9443.98fd92d814229ffffa98.jpg",
-    "static/media/IMG_8740.jpg": "/static/media/IMG_8740.c25f9ed177638a05895d.jpg",
     "static/media/IMG_4051.jpg": "/static/media/IMG_4051.45265fd272de85c12aad.jpg",
     "static/media/IMG_8741.jpg": "/static/media/IMG_8741.cb8ebe9775ad9fac053e.jpg",
     "static/media/IMG_5201.jpg": "/static/media/IMG_5201.393df02989da9cbcb662.jpg",
     "static/media/proposal copy.jpg": "/static/media/proposal copy.bbc7738cecc2753b4028.jpg",
     "index.html": "/index.html",
     "main.8c0d1d1e.css.map": "/static/css/main.8c0d1d1e.css.map",
-    "main.98471ec7.js.map": "/static/js/main.98471ec7.js.map",
+    "main.9e19a2aa.js.map": "/static/js/main.9e19a2aa.js.map",
     "787.0942884d.chunk.js.map": "/static/js/787.0942884d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8c0d1d1e.css",
-    "static/js/main.98471ec7.js"
+    "static/js/main.9e19a2aa.js"
   ]
 }
