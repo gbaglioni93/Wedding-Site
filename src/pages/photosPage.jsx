@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./css/photosPage.css";
 import images from "../utils/loadImages";
 
-const imageUrls = Object.values(images);
+// Sort the array of images randomly
+const imageUrls = Object.values(images).sort(() => Math.random() - 0.5);
 
 export default function PhotosPage() {
   const [selectedImage, setSelectedImage] = useState(null);
