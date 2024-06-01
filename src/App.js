@@ -99,14 +99,14 @@ function App() {
   }, []);
 
   if (pageContent.length === 0 || globalContent.length === 0) {
-    return null;
+    return <LinearProgress style={{ backgroundColor: "#f4f4f4" }} />;
   }
 
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <Navbar navItems={pageContent} navTitle={globalContent[0].navTitle} />
       {isLoading ? (
-        <LinearProgress style={{ backgroundColor: "#f9f9f9" }} />
+        <LinearProgress style={{ backgroundColor: "#f4f4f4" }} />
       ) : null}
       <Routes>
         <Route
@@ -137,7 +137,6 @@ function App() {
           }
         />
       </Routes>
-
       {!isLoading && <Footer text={globalContent[0].footer} />}
     </Router>
   );

@@ -73,7 +73,7 @@
     top: 60px; /* Adjust as needed */
     left: 0;
     width: 100%;
-    color: white;
+    color: #414a4c;
     background-color: var(--body-bg-color); /* Add a background color */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for separation */
   }
