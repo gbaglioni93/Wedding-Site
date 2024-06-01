@@ -1,6 +1,5 @@
 import React from "react";
 import "./css/globalStyles.css";
-import secondaryImage from "../assets/proposal.jpg";
 
 function getInfoContent(props) {
   return (

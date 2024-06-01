@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8c0d1d1e.css",
-    "main.js": "/static/js/main.9e19a2aa.js",
+    "main.css": "/static/css/main.5132b330.css",
+    "main.js": "/static/js/main.af92a40f.js",
     "static/js/787.0942884d.chunk.js": "/static/js/787.0942884d.chunk.js",
     "static/media/pixar.jpg": "/static/media/pixar.d833bd86b1753a24da49.jpg",
     "static/media/IMG_3204 2.jpg": "/static/media/IMG_3204 2.d7be32fb5dafaf6132b4.jpg",
@@ -26,7 +26,6 @@
     "static/media/IMG_3164.jpg": "/static/media/IMG_3164.8ad72792dce3ed2b15b4.jpg",
     "static/media/IMG_8939.jpg": "/static/media/IMG_8939.45f6d9544dd3fd0da476.jpg",
     "static/media/IMG_8683.jpg": "/static/media/IMG_8683.2939163c0bbd72082087.jpg",
-    "static/media/proposal.jpg": "/static/media/proposal.bfa620384742bf5de6c7.jpg",
     "static/media/IMG_2835.jpg": "/static/media/IMG_2835.b01cdf5b4da6e2636bb5.jpg",
     "static/media/IMG_0680.jpg": "/static/media/IMG_0680.cbab2660ae7d0d756439.jpg",
     "static/media/IMG_2293.jpg": "/static/media/IMG_2293.10ef967d899b1296619d.jpg",
@@ -72,12 +71,12 @@
     "static/media/IMG_5201.jpg": "/static/media/IMG_5201.393df02989da9cbcb662.jpg",
     "static/media/proposal copy.jpg": "/static/media/proposal copy.bbc7738cecc2753b4028.jpg",
     "index.html": "/index.html",
-    "main.8c0d1d1e.css.map": "/static/css/main.8c0d1d1e.css.map",
-    "main.9e19a2aa.js.map": "/static/js/main.9e19a2aa.js.map",
+    "main.5132b330.css.map": "/static/css/main.5132b330.css.map",
+    "main.af92a40f.js.map": "/static/js/main.af92a40f.js.map",
     "787.0942884d.chunk.js.map": "/static/js/787.0942884d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c0d1d1e.css",
-    "static/js/main.9e19a2aa.js"
+    "static/css/main.5132b330.css",
+    "static/js/main.af92a40f.js"
   ]
 }
